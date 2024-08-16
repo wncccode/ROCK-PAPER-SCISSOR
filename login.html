@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK PAPER SCISSOR</title>
+   
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- <script src = "./client.js"></script> -->
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    
+</head>
+<body>
+    <h2>Login</h2>
+
+<form action="/logincheck" method="post">
+  <div>
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="user" required ><br>
+  </div>
+  <div>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"  required><br>
+  </div>
+  <div>
+    <input type="submit" value="Login">
+  </div>
+</form>
+
+<h2>Signup</h2>
+
+<form action="/signup" method="post">
+  <div>
+    <label for="newusername">Username:</label><br>
+    <input type="text" id="newusername" name="newusername" required><br>
+  </div>
+  <div>
+    <label for="newpassword">Password:</label><br>
+    <input type="password" id="newpassword" name="newpassword" required><br>
+  </div>
+  <div>
+    <input type="submit" value="Signup">
+  </div>
+</form>
+</body>
+</html>
+

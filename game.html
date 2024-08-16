@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/socket.io/socket.io.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK PAPER SCISSOR</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src = "./client.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+</head>
+<body>
+    <h1>WELCOME TO ROCK PAPER SCISSOR GAME</h1>
+    <div id = "initial">
+    	<img height="200" src="rock.svg" class="img-responsive px-5 my-3 mx-4" alt="Rock">
+        <img height="200" src="paper.svg" class="img-responsive px-5 my-3 mx-4" alt="Paper">
+        <img height="200" src="scissor.svg" class="img-responsive px-5 my-3 mx-4" alt="Scissor">
+        <button class="form-control btn btn-primary" onclick="creategame()">Create Game</button> 
+        <div class="text-center display-3">or</div>
+        <input class="form-control my-2" placeholder="Enter Code" type="text" name="" id="roomid" />
+        <button class="form-control btn btn-secondary" onclick="joingame()">Join Game</button>
+    </div>
+    <div id = "playagame">
+       <div id = "waitingarea">
+         
+       </div>
+
+       <div id = "gamearea" style = "display: none;">
+            <h2>Choose your move:</h2>
+            <div id = "p1choice">
+                <button onclick = "send('rock')"> rock </button>
+                <button onclick = "send('paper')"> paper </button>
+                <button onclick = "send('scissor')"> scissor </button>
+            </div>
+            <div id = "p2choice">
+                opponent choice:
+            </div>
+       </div>
+
+       <div id = "resultsarea">
+        
+       </div>
+        
+    </div>
+    
+</body>
+</html>
